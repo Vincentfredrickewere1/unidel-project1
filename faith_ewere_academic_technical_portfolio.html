@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fredrick Ewere — ICT & Techpreneurship Student | UNIDEL</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Strict 3-Color Palette Configuration -->
+    <script>
+        tailwind.config = {h
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    },
+                    colors: {
+                        paper: '#F8F9FA',   /* Color 1: Off-white background */
+                        ink: '#1A202C',     /* Color 2: Deep charcoal text & headers */
+                        accent: '#2B4C7E',  /* Color 3: Muted slate navy accent */
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-paper text-ink font-sans antialiased selection:bg-accent selection:text-paper">
+
+    <!-- 1. STICKY MINIMALIST TOP NAVIGATION BAR -->
+    <header class="sticky top-0 z-40 bg-paper/95 backdrop-blur-sm border-b border-ink/15">
+        <div class="max-w-5xl mx-auto px-6 sm:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Brand / Name -->
+                <a href="#top" class="text-lg font-semibold tracking-tight text-ink hover:text-accent transition-colors">
+                    Fredrick Ewere
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#about" class="text-ink/80 hover:text-accent transition-colors">About</a>
+                    <a href="#education" class="text-ink/80 hover:text-accent transition-colors">Education &amp; Coursework</a>
+                    <a href="#skills" class="text-ink/80 hover:text-accent transition-colors">Technical Skills</a>
+                    <a href="#projects" class="text-ink/80 hover:text-accent transition-colors">Projects</a>
+                    <a href="#contact" class="px-4 py-2 rounded border border-accent text-accent hover:bg-accent hover:text-paper transition-colors">
+                        Contact
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobile-menu-btn" type="button" aria-label="Toggle Menu" class="md:hidden p-2 rounded border border-ink/20 text-ink hover:border-accent hover:text-accent">
+                    <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-paper border-b border-ink/15 px-6 py-4 space-y-3 text-sm font-medium">
+            <a href="#about" class="block py-1.5 text-ink/85 hover:text-accent mobile-nav-link">About</a>
+            <a href="#education" class="block py-1.5 text-ink/85 hover:text-accent mobile-nav-link">Education &amp; Coursework</a>
+            <a href="#skills" class="block py-1.5 text-ink/85 hover:text-accent mobile-nav-link">Technical Skills</a>
+            <a href="#projects" class="block py-1.5 text-ink/85 hover:text-accent mobile-nav-link">Projects</a>
+            <a href="#contact" class="block py-1.5 text-accent font-semibold mobile-nav-link">Contact</a>
+        </div>
+    </header>
+
+    <main id="top" class="max-w-5xl mx-auto px-6 sm:px-8">
+
+        <!-- 2. HERO / INTRODUCTION SECTION -->
+        <section class="py-16 sm:py-24 border-b border-ink/15">
+            <div class="max-w-3xl">
+                <p class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-accent mb-3">
+                    University of Delta (UNIDEL), Agbor, Nigeria
+                </p>
+                <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-ink mb-4">
+                    Fredrick Ewere
+                </h1>
+                <p class="text-lg sm:text-xl font-medium text-ink/85 mb-6">
+                    ICT &amp; Techpreneurship Student &nbsp;|&nbsp; Full-Stack Web Developer
+                </p>
+                <p class="text-base text-ink/80 leading-relaxed mb-8">
+                    I am Vincent Fredrick Ewere, an undergraduate student at the University of Delta (UNIDEL) studying Information and Communication Technology (ICT) and Techpreneurship. I focus on building practical, structured software systems, web applications, and user-validated digital solutions.
+                </p>
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="#projects" class="px-6 py-3 rounded bg-accent text-paper text-sm font-medium border border-accent hover:bg-ink hover:border-ink transition-colors">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="px-6 py-3 rounded bg-paper text-ink text-sm font-medium border border-ink/30 hover:border-accent hover:text-accent transition-colors">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. ABOUT ME SECTION -->
+        <section id="about" class="py-16 sm:py-20 border-b border-ink/15 scroll-mt-16">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+                <div class="md:col-span-4">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-accent block mb-2">01 / Profile</span>
+                    <h2 class="text-2xl font-bold text-ink tracking-tight">About Me</h2>
+                </div>
+                <div class="md:col-span-8 space-y-5 text-ink/85 leading-relaxed">
+                    <p>
+                        My academic path at the University of Delta (UNIDEL), Agbor combines core computing fundamentals with real-world technology entrepreneurship. Rather than viewing software engineering purely as writing code, I approach every project as an exercise in identifying real user friction and delivering clean, dependable solutions.
+                    </p>
+                    <p>
+                        Through hands-on coursework and independent development, I have built full-stack PHP and MySQL platforms, responsive web interfaces, and command-line utilities. I value maintainable architecture, clear documentation, and customer-first problem discovery.
+                    </p>
+                    <div class="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="p-4 rounded border border-ink/15">
+                            <p class="text-xs uppercase tracking-wider text-ink/60 mb-1">Full Name</p>
+                            <p class="text-sm font-semibold text-ink">Vincent Fredrick Ewere</p>
+                        </div>
+                        <div class="p-4 rounded border border-ink/15">
+                            <p class="text-xs uppercase tracking-wider text-ink/60 mb-1">Institution</p>
+                            <p class="text-sm font-semibold text-ink">UNIDEL, Agbor, Delta State</p>
+                        </div>
+                        <div class="p-4 rounded border border-ink/15">
+                            <p class="text-xs uppercase tracking-wider text-ink/60 mb-1">Core Focus</p>
+                            <p class="text-sm font-semibold text-ink">Web Systems &amp; Techpreneurship</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. EDUCATION & COURSEWORK SECTION -->
+        <section id="education" class="py-16 sm:py-20 border-b border-ink/15 scroll-mt-16">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+                <div class="md:col-span-4">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-accent block mb-2">02 / Academics</span>
+                    <h2 class="text-2xl font-bold text-ink tracking-tight">Education &amp; Coursework</h2>
+                </div>
+                <div class="md:col-span-8 space-y-8">
+                    <!-- Institution Card -->
+                    <div class="p-6 rounded border border-ink/20 bg-paper">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
+                            <h3 class="text-lg font-bold text-ink">University of Delta (UNIDEL), Agbor</h3>
+                            <span class="inline-block text-xs font-semibold px-3 py-1 rounded border border-accent text-accent w-fit">
+                                Undergraduate (In Progress)
+                            </span>
+                        </div>
+                        <p class="text-sm font-medium text-accent mb-3">
+                            B.Sc. Information and Communication Technology (ICT) &amp; Techpreneurship
+                        </p>
+                        <p class="text-sm text-ink/80 leading-relaxed">
+                            Focusing on software engineering, telecommunications infrastructure, database architecture, and technology venture validation within Delta State, Nigeria.
+                        </p>
+                    </div>
+
+                    <!-- Key Coursework Grid -->
+                    <div>
+                        <h4 class="text-sm font-semibold uppercase tracking-wider text-ink/70 mb-4">
+                            Relevant Coursework &amp; Academic Focus
+                        </h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="p-4 rounded border border-ink/15">
+                                <h5 class="text-sm font-semibold text-ink mb-1">Computer Networks</h5>
+                                <p class="text-xs text-ink/75 leading-relaxed">OSI/TCP-IP models, routing protocols, subnetting, and local area network architecture.</p>
+                            </div>
+                            <div class="p-4 rounded border border-ink/15">
+                                <h5 class="text-sm font-semibold text-ink mb-1">Satellite Communication</h5>
+                                <p class="text-xs text-ink/75 leading-relaxed">Orbital mechanics, uplink/downlink signal propagation, and telecommunications transmission.</p>
+                            </div>
+                            <div class="p-4 rounded border border-ink/15">
+                                <h5 class="text-sm font-semibold text-ink mb-1">Techpreneurship &amp; Customer Discovery</h5>
+                                <p class="text-xs text-ink/75 leading-relaxed">Field interviews, problem validation, lean product framing, and value proposition design.</p>
+                            </div>
+                            <div class="p-4 rounded border border-ink/15">
+                                <h5 class="text-sm font-semibold text-ink mb-1">Database Systems</h5>
+                                <p class="text-xs text-ink/75 leading-relaxed">Relational schema normalization, SQL querying, indexing, and transactional integrity.</p>
+                            </div>
+                            <div class="p-4 rounded border border-ink/15 sm:col-span-2">
+                                <h5 class="text-sm font-semibold text-ink mb-1">Web Engineering</h5>
+                                <p class="text-xs text-ink/75 leading-relaxed">Client-server architecture, server-side scripting, authentication sessions, and responsive UI standards.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. TECHNICAL SKILLS SECTION -->
+        <section id="skills" class="py-16 sm:py-20 border-b border-ink/15 scroll-mt-16">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+                <div class="md:col-span-4">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-accent block mb-2">03 / Capabilities</span>
+                    <h2 class="text-2xl font-bold text-ink tracking-tight">Technical Skills</h2>
+                </div>
+                <div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <!-- Category 1: Backend & Databases -->
+                    <div class="p-5 rounded border border-ink/20">
+                        <h3 class="text-sm font-bold text-accent uppercase tracking-wider pb-3 mb-4 border-b border-ink/15">
+                            Backend &amp; Databases
+                        </h3>
+                        <ul class="space-y-2.5 text-sm text-ink/85">
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>PHP (OOP &amp; Procedural)
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Laravel Framework
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>MySQL Relational DB
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Session &amp; File Management
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Apache / .htaccess
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 2: Frontend & UI -->
+                    <div class="p-5 rounded border border-ink/20">
+                        <h3 class="text-sm font-bold text-accent uppercase tracking-wider pb-3 mb-4 border-b border-ink/15">
+                            Frontend &amp; UI
+                        </h3>
+                        <ul class="space-y-2.5 text-sm text-ink/85">
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>HTML5 Semantic Markup
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>CSS3 &amp; Responsive Grid
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Bootstrap 5
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Tailwind CSS
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>JavaScript (ES6+)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 3: Tools & Deployment -->
+                    <div class="p-5 rounded border border-ink/20">
+                        <h3 class="text-sm font-bold text-accent uppercase tracking-wider pb-3 mb-4 border-b border-ink/15">
+                            Tools &amp; Deployment
+                        </h3>
+                        <ul class="space-y-2.5 text-sm text-ink/85">
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Git &amp; GitHub
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>Linux &amp; Bash CLI
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>XAMPP Local Server
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>cPanel Hosting Admin
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>FTP &amp; Server Deployment
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SELECTED PROJECTS SECTION -->
+        <section id="projects" class="py-16 sm:py-20 border-b border-ink/15 scroll-mt-16">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-widest text-accent block mb-2">04 / Portfolio Work</span>
+                    <h2 class="text-2xl font-bold text-ink tracking-tight">Selected Projects</h2>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap gap-2" role="tablist" aria-label="Filter projects">
+                    <button type="button" data-filter="all" class="filter-btn px-4 py-2 rounded text-xs font-semibold border border-accent bg-accent text-paper transition-colors">
+                        All (6)
+                    </button>
+                    <button type="button" data-filter="web" class="filter-btn px-4 py-2 rounded text-xs font-semibold border border-ink/20 bg-paper text-ink hover:border-accent transition-colors">
+                        Web Apps
+                    </button>
+                    <button type="button" data-filter="cli-academic" class="filter-btn px-4 py-2 rounded text-xs font-semibold border border-ink/20 bg-paper text-ink hover:border-accent transition-colors">
+                        CLI &amp; Academic
+                    </button>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project 1: Novelgram -->
+                <article class="project-card flex flex-col justify-between p-6 rounded border border-ink/20 bg-paper hover:border-accent transition-colors" data-category="web">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-xs font-semibold text-accent uppercase tracking-wider">Web Application</span>
+                            <span class="text-xs font-mono text-ink/60">novelgram.org</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-ink mb-2">Novelgram</h3>
+                        <p class="text-sm text-ink/80 leading-relaxed mb-4">
+                            Online novel reading platform featuring a structured e-book reader interface, chapter submission workflows, and an author management system.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="text-xs px-2.5 py-1 rounded border border-ink/15 text-ink/80">PHP</span>
+                            <span class="text-xs px-2.5 py-1 rounded border border-ink/15 text-ink/80">MySQL</span>
+                            <span class="text-xs px-2.5 py-1 rounded border border-ink/15 text-ink/80">Bootstrap</span>
+                        </div>
+                        <button type="button" onclick="openProjectModal('novelgram')" class="text-xs font-semibold text-accent hover:text-ink underline underline-offset-4">
+                            View Project Details &rarr;
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Project 2: SwiftRoute Delivery -->
+                <article class="project-card flex flex-col justify-between p-6 rounded border border-ink/20 bg-paper hover:border-accent transition-colors" data-category="web">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-xs font-semibold text-accent uppercase tracking-wider">Web Application</span>
+                            <span class="text-xs font-mono text-ink/60">Logistics UI</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-ink mb-2">SwiftRoute Delivery</h3>
+                        <p class="text-sm text-ink/80 leading-relaxed mb-4">
+                            Responsive multi-page logistics and parcel delivery web application complete with rate estimation, dispatch overview, and shipment tracking UI.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="text-xs px-2.5 py-1 rounded border border-ink/15 text-ink/80">HTML5</span>
+                            <span class="text-xs px-2.5 py-1 rounded border border-ink/15 text-ink/80">CSS3</span>
+                            <span class="text-xs px-2.5 py-1 rounded border border-ink/15 text-ink/80">Bootstrap 5</span>
+                        </div>
+                        <button type="button" onclick="openProjectModal('swiftroute')" class="text-xs font-semibold text-accent hover:text-ink underline underline-offset-4">
+                            View Project Details &rarr;
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Project 3: Real-Time Group Chat App -->
+                <article class="project-card flex flex-col justify-between p-6 rounded border border-ink/20 bg-paper hover:border-accent transition-colors" data-category="web">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-xs font-semibold text-accent uppercase tracking-wider">Web Application</span>
+                            <span class="text-xs font-mono text-ink/60">Messaging System</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-ink mb-2">Real-Time Group Chat App</h3>
+                        <p class="text-sm text-ink/80 leading-relaxed mb-4">
+                            PHP-based real-time group messaging application implementing session-based user authentication, asynchronous polling, and server-side message logging.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="text-xs px-2.5 py-1 rounded border border-ink/15 text-ink/80">PHP</span>
+                            <span class="text-xs px-2.5 py-1 rounded border border-ink/15 text-ink/80">Sessions</span>
+                            <span class="text-xs px-2.5 py-1 rounded border border-ink/15 text-ink/80">JavaScript</span>
+                        </div>
+                        <button type="button" onclick="openProjectModal('groupchat')" class="text-xs font-semibold text-accent hover:text-ink underline underline-offset-4">
+                            View Project Details &rarr;
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Project 4: Telecom USSD Menu Simulator -->
+                <article class="project-card flex flex-col justify-between p-6 rounded border border-ink/20 bg-paper hover:border-accent transition-colors" data-category="cli-academic">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-xs font-semibold text-accent uppercase tracking-wider">CLI &amp; Academic</span>
+                            <span class="text-xs font-mono text-ink/60">PHP CLI</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-ink mb-2">Telecom USSD Menu Simulator</h3>
+                        <p class="text-sm text-ink/80 leading-relaxed mb-4">
+                            Command-line PHP application simulating Nigerian telecom USSD state menus for purchasing data bundles, airtime sharing, and account balance checks.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="text-xs px-2.5 py-1 rounded border border-ink/15 text-ink/80">PHP CLI</span>
+                            <span class="text-xs px-2.5 py-1 rounded border border-ink/15 text-ink/80">State Logic</span>
+                            <span class="text-xs px-2.5 py-1 rounded border border-ink/15 text-ink/80">Telecom Systems</span>
+                        </div>
+                        <button type="button" onclick="openProjectModal('ussd')" class="text-xs font-semibold text-accent hover:text-ink underline underline-offset-4">
+                            View Project Details &rarr;
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Project 5: Nigerian State Information Directory -->
+                <article class="project-card flex flex-col justify-between p-6 rounded border border-ink/20 bg-paper hover:border-accent transition-colors" data-category="cli-academic">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-xs font-semibold text-accent uppercase tracking-wider">CLI &amp; Academic</span>
+                            <span class="text-xs font-mono text-ink/60">Data Utility</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-ink mb-2">Nigerian State Information Directory</h3>
+                        <p class="text-sm text-ink/80 leading-relaxed mb-4">
+                            Interactive terminal directory parsing structured datasets of Nigerian states, administrative capitals, Local Government Areas (LGAs), and mineral resources.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="text-xs px-2.5 py-1 rounded border border-ink/15 text-ink/80">PHP</span>
+                            <span class="text-xs px-2.5 py-1 rounded border border-ink/15 text-ink/80">Data Structures</span>
+                            <span class="text-xs px-2.5 py-1 rounded border border-ink/15 text-ink/80">Terminal UI</span>
+                        </div>
+                        <button type="button" onclick="openProjectModal('directory')" class="text-xs font-semibold text-accent hover:text-ink underline underline-offset-4">
+                            View Project Details &rarr;
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Project 6: Customer Discovery Field Study -->
+                <article class="project-card flex flex-col justify-between p-6 rounded border border-ink/20 bg-paper hover:border-accent transition-colors" data-category="cli-academic">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-xs font-semibold text-accent uppercase tracking-wider">Techpreneurship</span>
+                            <span class="text-xs font-mono text-ink/60">Field Research</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-ink mb-2">Customer Discovery Field Study ("Be the Customer Detective")</h3>
+                        <p class="text-sm text-ink/80 leading-relaxed mb-4">
+                            Academic techpreneurship research project focused on real-world user interviews, behavioral observation, and evidence-based problem discovery.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="text-xs px-2.5 py-1 rounded border border-ink/15 text-ink/80">User Research</span>
+                            <span class="text-xs px-2.5 py-1 rounded border border-ink/15 text-ink/80">Problem Validation</span>
+                            <span class="text-xs px-2.5 py-1 rounded border border-ink/15 text-ink/80">UNIDEL</span>
+                        </div>
+                        <button type="button" onclick="openProjectModal('detective')" class="text-xs font-semibold text-accent hover:text-ink underline underline-offset-4">
+                            View Project Details &rarr;
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 7. CONTACT SECTION -->
+        <section id="contact" class="py-16 sm:py-20 scroll-mt-16">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+                <div class="md:col-span-5 space-y-5">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-accent block mb-2">05 / Connect</span>
+                        <h2 class="text-2xl font-bold text-ink tracking-tight">Get in Touch</h2>
+                    </div>
+                    <p class="text-sm text-ink/80 leading-relaxed">
+                        Available for academic collaborations, software development internships, and web engineering projects. Feel free to send a direct message or connect via email and GitHub.
+                    </p>
+
+                    <div class="pt-2 space-y-3 text-sm">
+                        <div class="p-4 rounded border border-ink/15">
+                            <p class="text-xs uppercase tracking-wider text-ink/60 mb-1">Academic Email</p>
+                            <a href="mailto:Fredrick.ewere@unidel.edu.ng" class="font-medium text-accent hover:underline">
+                                Fredrick.ewere@unidel.edu.ng
+                            </a>
+                        </div>
+                        <div class="p-4 rounded border border-ink/15">
+                            <p class="text-xs uppercase tracking-wider text-ink/60 mb-1">GitHub Profile</p>
+                            <a href="https://github.com/Fredrickewere" target="_blank" rel="noopener noreferrer" class="font-medium text-accent hover:underline">
+                                github.com/Fredrickewere
+                            </a>
+                        </div>
+                        <div class="p-4 rounded border border-ink/15">
+                            <p class="text-xs uppercase tracking-wider text-ink/60 mb-1">Location</p>
+                            <p class="font-medium text-ink">Agbor, Delta State, Nigeria</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="md:col-span-7">
+                    <form id="contact-form" novalidate class="p-6 sm:p-8 rounded border border-ink/20 bg-paper space-y-5">
+                        <div>
+                            <label for="sender-name" class="block text-xs font-semibold uppercase tracking-wider text-ink mb-2">
+                                Full Name
+                            </label>
+                            <input type="text" id="sender-name" name="name" required placeholder="e.g., Dr. Emmanuel Okafor"
+                                class="w-full px-4 py-2.5 rounded bg-paper border border-ink/25 text-sm text-ink placeholder:text-ink/40 focus:outline-none focus:border-accent">
+                            <p id="error-name" class="hidden text-xs text-accent mt-1.5 font-medium">Please enter your name.</p>
+                        </div>
+
+                        <div>
+                            <label for="sender-email" class="block text-xs font-semibold uppercase tracking-wider text-ink mb-2">
+                                Email Address
+                            </label>
+                            <input type="email" id="sender-email" name="email" required placeholder="e.g., name@domain.com"
+                                class="w-full px-4 py-2.5 rounded bg-paper border border-ink/25 text-sm text-ink placeholder:text-ink/40 focus:outline-none focus:border-accent">
+                            <p id="error-email" class="hidden text-xs text-accent mt-1.5 font-medium">Please enter a valid email address.</p>
+                        </div>
+
+                        <div>
+                            <label for="sender-subject" class="block text-xs font-semibold uppercase tracking-wider text-ink mb-2">
+                                Subject
+                            </label>
+                            <input type="text" id="sender-subject" name="subject" required placeholder="Academic Project / Collaboration Inquiry"
+                                class="w-full px-4 py-2.5 rounded bg-paper border border-ink/25 text-sm text-ink placeholder:text-ink/40 focus:outline-none focus:border-accent">
+                            <p id="error-subject" class="hidden text-xs text-accent mt-1.5 font-medium">Please provide a subject line.</p>
+                        </div>
+
+                        <div>
+                            <label for="sender-message" class="block text-xs font-semibold uppercase tracking-wider text-ink mb-2">
+                                Message
+                            </label>
+                            <textarea id="sender-message" name="message" rows="4" required placeholder="Write your message here..."
+                                class="w-full px-4 py-2.5 rounded bg-paper border border-ink/25 text-sm text-ink placeholder:text-ink/40 focus:outline-none focus:border-accent"></textarea>
+                            <p id="error-message" class="hidden text-xs text-accent mt-1.5 font-medium">Please enter a message (at least 10 characters).</p>
+                        </div>
+
+                        <button type="submit" class="w-full sm:w-auto px-6 py-3 rounded bg-accent text-paper text-sm font-medium border border-accent hover:bg-ink hover:border-ink transition-colors">
+                            Send Message
+                        </button>
+
+                        <!-- Confirmation Banner (Hidden by default) -->
+                        <div id="form-confirmation" class="hidden p-4 rounded border border-accent bg-paper text-sm text-ink">
+                            <p class="font-semibold text-accent mb-1">Message Sent Successfully</p>
+                            <p id="confirmation-text" class="text-xs text-ink/85 leading-relaxed"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MINIMAL FOOTER -->
+    <footer class="border-t border-ink/15 mt-8">
+        <div class="max-w-5xl mx-auto px-6 sm:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ink/70">
+            <p>&copy; 2026 Vincent Fredrick Ewere. All rights reserved.</p>
+            <p>B.Sc. ICT &amp; Techpreneurship &middot; University of Delta (UNIDEL), Agbor</p>
+        </div>
+    </footer>
+
+    <!-- PROJECT DETAILS MODAL (Strict 3-Color Styling) -->
+    <div id="project-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/60" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="bg-paper border border-ink/30 rounded max-w-xl w-full p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto">
+            <div class="flex items-start justify-between gap-4 pb-4 mb-5 border-b border-ink/15">
+                <div>
+                    <span id="modal-category" class="text-xs font-semibold uppercase tracking-widest text-accent block mb-1">Category</span>
+                    <h3 id="modal-title" class="text-xl font-bold text-ink">Project Title</h3>
+                </div>
+                <button type="button" id="close-modal-btn" aria-label="Close modal" class="p-1.5 rounded border border-ink/20 text-ink hover:border-accent hover:text-accent">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="space-y-5 text-sm">
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-ink/70 mb-1.5">Problem Solved</h4>
+                    <p id="modal-problem" class="text-ink/85 leading-relaxed"></p>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-ink/70 mb-2">Key Features</h4>
+                    <ul id="modal-features" class="space-y-1.5 text-ink/85 list-disc pl-5"></ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-ink/70 mb-2">Technology Stack</h4>
+                    <div id="modal-stack" class="flex flex-wrap gap-2"></div>
+                </div>
+            </div>
+
+            <div class="mt-7 pt-4 border-t border-ink/15 flex justify-end">
+                <button type="button" id="close-modal-footer-btn" class="px-5 py-2 rounded border border-accent bg-accent text-paper text-xs font-semibold hover:bg-ink hover:border-ink transition-colors">
+                    Close Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE LOGIC -->
+    <script>
+        // Structured Project Data for Modal Details
+        const projectDetails = {
+            novelgram: {
+                category: 'Web Application · novelgram.org',
+                title: 'Novelgram — Online Novel & E-Book Platform',
+                problem: 'Independent writers and student authors lacked a distraction-free, structured web publishing system to organize serialized chapters and offer readers a clean digital reading experience.',
+                features: [
+                    'Clean, legible chapter reader interface optimized for long-form mobile and desktop reading.',
+                    'Structured author dashboard for creating books, managing metadata, and submitting chapters.',
+                    'Relational MySQL database schema linking authors, stories, genres, and sequential chapters.',
+                    'Secure server-side authentication and session validation for registered authors.'
+                ],
+                stack: ['PHP', 'MySQL', 'Bootstrap', 'HTML5', 'CSS3', 'Apache']
+            },
+            swiftroute: {
+                category: 'Web Application · Logistics UI',
+                title: 'SwiftRoute Delivery',
+                problem: 'Small and mid-sized courier services require clear, accessible web portals where customers can inspect delivery tiers, understand transit routes, and track parcel statuses without visual clutter.',
+                features: [
+                    'Responsive multi-page architecture covering Home, Services, Pricing, and Live Tracking views.',
+                    'Interactive shipment tracking interface displaying parcel milestone states.',
+                    'Mobile-first grid layout built with Bootstrap 5 for field and customer usability.',
+                    'Clear call-to-action booking inquiry flows.'
+                ],
+                stack: ['HTML5', 'CSS3', 'Bootstrap 5', 'Responsive Design']
+            },
+            groupchat: {
+                category: 'Web Application · Real-Time Messaging',
+                title: 'Real-Time Group Chat App',
+                problem: 'Needed a lightweight, dependency-free group communication tool capable of running on standard shared PHP hosting without complex WebSocket server overhead.',
+                features: [
+                    'Session-based user login and active participant identification.',
+                    'Asynchronous message fetching and posting for near real-time conversation updates.',
+                    'Persistent server-side message logging with timestamps and sender attribution.',
+                    'Input sanitization to prevent XSS and malformed message payloads.'
+                ],
+                stack: ['PHP', 'Session Management', 'File/DB Logging', 'JavaScript', 'HTML5/CSS3']
+            },
+            ussd: {
+                category: 'CLI & Academic · Telecommunications',
+                title: 'Telecom USSD Menu Simulator',
+                problem: 'Simulating Nigerian mobile network operator USSD workflows (*123# style nested menus) in a controlled terminal environment to study state machines and user input validation.',
+                features: [
+                    'Multi-level interactive CLI menu navigation (Data Bundles, Airtime Transfer, Balance Inquiry).',
+                    'In-memory balance tracking and transaction confirmation prompts.',
+                    'Graceful error handling for invalid numeric inputs or insufficient wallet balances.',
+                    'Modular PHP CLI architecture mirroring real-world telecom session states.'
+                ],
+                stack: ['PHP CLI', 'Standard I/O', 'State Machine Logic', 'Bash Terminal']
+            },
+            directory: {
+                category: 'CLI & Academic · Civic Data Utility',
+                title: 'Nigerian State Information Directory',
+                problem: 'Quickly querying accurate administrative and geographic facts across all 36 Nigerian states and the FCT from a lightweight command-line utility.',
+                features: [
+                    'Searchable terminal index covering state capitals, geopolitical zones, and Local Government Areas (LGAs).',
+                    'Structured listing of key natural and mineral resources per state.',
+                    'Fast array parsing and case-insensitive search filtering in PHP.',
+                    'Formatted plain-text tabular output for clear terminal readability.'
+                ],
+                stack: ['PHP', 'Associative Data Structures', 'CLI Parsing', 'Linux/Bash']
+            },
+            detective: {
+                category: 'Techpreneurship · Field Research',
+                title: 'Customer Discovery Field Study ("Be the Customer Detective")',
+                problem: 'Many student startups fail because they build technical products before verifying whether target users genuinely experience the assumed pain point.',
+                features: [
+                    'Conducted structured, non-leading field interviews with local campus and Agbor community users.',
+                    'Documented recurring workflow bottlenecks, current user workarounds, and willingness to adopt solutions.',
+                    'Synthesized field observations into actionable problem statements and value propositions.',
+                    'Presented findings as part of the UNIDEL ICT & Techpreneurship curriculum.'
+                ],
+                stack: ['Customer Discovery', 'Field Interviews', 'Lean Validation', 'Problem Framing']
+            }
+        };
+
+        // 1. Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            iconOpen.classList.toggle('hidden', !isHidden);
+            iconClose.classList.toggle('hidden', isHidden);
+        });
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            });
+        });
+
+        // 2. Project Category Filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filterValue = btn.getAttribute('data-filter');
+
+                // Update active button styles (strictly 3 colors)
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-accent', 'text-paper', 'border-accent');
+                    b.classList.add('bg-paper', 'text-ink', 'border-ink/20');
+                });
+                btn.classList.remove('bg-paper', 'text-ink', 'border-ink/20');
+                btn.classList.add('bg-accent', 'text-paper', 'border-accent');
+
+                // Show/hide cards
+                projectCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (filterValue === 'all' || cardCategory === filterValue) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // 3. Project Details Modal Controls
+        const modal = document.getElementById('project-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const closeModalFooterBtn = document.getElementById('close-modal-footer-btn');
+
+        function openProjectModal(projectKey) {
+            const data = projectDetails[projectKey];
+            if (!data) return;
+
+            document.getElementById('modal-category').textContent = data.category;
+            document.getElementById('modal-title').textContent = data.title;
+            document.getElementById('modal-problem').textContent = data.problem;
+
+            const featuresList = document.getElementById('modal-features');
+            featuresList.innerHTML = '';
+            data.features.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                featuresList.appendChild(li);
+            });
+
+            const stackContainer = document.getElementById('modal-stack');
+            stackContainer.innerHTML = '';
+            data.stack.forEach(tech => {
+                const span = document.createElement('span');
+                span.className = 'text-xs px-2.5 py-1 rounded border border-ink/20 text-ink font-medium';
+                span.textContent = tech;
+                stackContainer.appendChild(span);
+            });
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProjectModal() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        closeModalBtn.addEventListener('click', closeProjectModal);
+        closeModalFooterBtn.addEventListener('click', closeProjectModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeProjectModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeProjectModal();
+            }
+        });
+
+        // 4. Contact Form Client-Side Validation & Confirmation
+        const contactForm = document.getElementById('contact-form');
+        const confirmationBox = document.getElementById('form-confirmation');
+        const confirmationText = document.getElementById('confirmation-text');
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const nameInput = document.getElementById('sender-name');
+            const emailInput = document.getElementById('sender-email');
+            const subjectInput = document.getElementById('sender-subject');
+            const messageInput = document.getElementById('sender-message');
+
+            const errorName = document.getElementById('error-name');
+            const errorEmail = document.getElementById('error-email');
+            const errorSubject = document.getElementById('error-subject');
+            const errorMessage = document.getElementById('error-message');
+
+            let isValid = true;
+
+            // Validate Name
+            if (nameInput.value.trim().length < 2) {
+                errorName.classList.remove('hidden');
+                isValid = false;
+            } else {
+                errorName.classList.add('hidden');
+            }
+
+            // Validate Email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value.trim())) {
+                errorEmail.classList.remove('hidden');
+                isValid = false;
+            } else {
+                errorEmail.classList.add('hidden');
+            }
+
+            // Validate Subject
+            if (subjectInput.value.trim().length < 3) {
+                errorSubject.classList.remove('hidden');
+                isValid = false;
+            } else {
+                errorSubject.classList.add('hidden');
+            }
+
+            // Validate Message
+            if (messageInput.value.trim().length < 10) {
+                errorMessage.classList.remove('hidden');
+                isValid = false;
+            } else {
+                errorMessage.classList.add('hidden');
+            }
+
+            if (isValid) {
+                confirmationText.textContent = `Thank you, ${nameInput.value.trim()}. Your message regarding "${subjectInput.value.trim()}" has been recorded for Fredrick Ewere. A copy can also be sent directly to Fredrick.ewere@unidel.edu.ng.`;
+                confirmationBox.classList.remove('hidden');
+                contactForm.reset();
+            } else {
+                confirmationBox.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
